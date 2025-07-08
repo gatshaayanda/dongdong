@@ -5,17 +5,17 @@
 
 /* 2. CSS Variables */
 :root {
-  --background: #FFFDF6; /* Warm Shell */
-  --foreground: #0F264B; /* Deep Navy */
+  --background: #FFFDF6;
+  --foreground: #0F264B;
+
   --background-dark: #0A0A0A;
   --foreground-dark: #F3F4F6;
 
-  --brand-primary: #0F264B; /* Navy */
-  --brand-secondary: #C9A43E; /* Precision Gold */
-  --brand-accent: #D9DCE2; /* Cloud Silver */
+  --brand-primary: #1F60C4; /* DGDC Blue */
+  --brand-secondary: #F9A825; /* Yellow/Orange */
+  --brand-accent: #00A859; /* Green */
 
-  --font-sans: var(--font-geist-sans), sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --font-sans: var(--font-inter), sans-serif;
 }
 
 /* 3. Dark Mode */
@@ -82,7 +82,7 @@ button {
 }
 button:hover {
   background: var(--brand-accent);
-  color: var(--foreground);
+  color: white;
 }
 
 /* 8. Form Elements */
@@ -98,7 +98,7 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--brand-secondary);
-  box-shadow: 0 0 0 2px rgba(201,164,62,0.3);
+  box-shadow: 0 0 0 2px rgba(249,168,37,0.3);
 }
 
 /* 9. Sections */
@@ -109,17 +109,17 @@ section {
 /* 10. Footer */
 footer {
   background: var(--brand-accent);
-  color: var(--brand-primary);
+  color: white;
   padding: 2rem 1rem;
   text-align: center;
 }
 
 /* 11. Utility Classes */
-.btn-navy {
-  @apply inline-flex items-center gap-2 bg-[#0F264B] text-white px-4 py-2 rounded shadow hover:bg-[#1a3866] transition;
+.btn-dgdc-blue {
+  @apply inline-flex items-center gap-2 bg-[#1F60C4] text-white px-4 py-2 rounded shadow hover:bg-[#0F4AB1] transition;
 }
-.btn-gold {
-  @apply inline-flex items-center gap-2 bg-[#C9A43E] text-[#0F264B] px-4 py-2 rounded shadow hover:brightness-110 transition;
+.btn-dgdc-yellow {
+  @apply inline-flex items-center gap-2 bg-[#F9A825] text-[#0F264B] px-4 py-2 rounded shadow hover:brightness-110 transition;
 }
 .card {
   @apply bg-white border border-gray-100 rounded-xl p-6 shadow-sm;

@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { AnalyticsProvider } from '@/components/AnalyticsProvider';
 import Header from '@/components/Header';
@@ -9,20 +9,19 @@ import Loader from '@/components/AdminHubLoader';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
-const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
+const inter = Inter({ variable: '--font-inter', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'AdminHub',
+  title: 'DGDC | Dongdong Global Development Council',
   description:
-    'Powerful websites. Built fast. Guided by experience. A boutique partner delivering scalable Next.js & Firebase platforms.',
+    'Empowering Young African Talent for the Digital World. DGDC connects African developers to real global opportunities through training, projects, and partnerships.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased bg-[--background] text-[--foreground]`}
+        className={`min-h-screen flex flex-col ${inter.variable} antialiased bg-[--background] text-[--foreground]`}
       >
         <AnalyticsProvider>
           <Loader />
